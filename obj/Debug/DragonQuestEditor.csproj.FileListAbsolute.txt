@@ -1,0 +1,10 @@
+C:\Users\vitor\source\repos\DragonQuestEditor\bin\Debug\DragonQuestEditor.exe.config
+C:\Users\vitor\source\repos\DragonQuestEditor\bin\Debug\DragonQuestEditor.exe
+C:\Users\vitor\source\repos\DragonQuestEditor\bin\Debug\DragonQuestEditor.pdb
+C:\Users\vitor\source\repos\DragonQuestEditor\obj\Debug\DragonQuestEditor.csprojAssemblyReference.cache
+C:\Users\vitor\source\repos\DragonQuestEditor\obj\Debug\DragonQuestEditor.Form1.resources
+C:\Users\vitor\source\repos\DragonQuestEditor\obj\Debug\DragonQuestEditor.Properties.Resources.resources
+C:\Users\vitor\source\repos\DragonQuestEditor\obj\Debug\DragonQuestEditor.csproj.GenerateResource.cache
+C:\Users\vitor\source\repos\DragonQuestEditor\obj\Debug\DragonQuestEditor.csproj.CoreCompileInputs.cache
+C:\Users\vitor\source\repos\DragonQuestEditor\obj\Debug\DragonQuestEditor.exe
+C:\Users\vitor\source\repos\DragonQuestEditor\obj\Debug\DragonQuestEditor.pdb
