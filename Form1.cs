@@ -235,7 +235,7 @@ namespace DragonQuestEditor
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("http://google.com");
+            System.Diagnostics.Process.Start("https://github.com/MrVtR/Dragon_Quest_II_Nintendo_Switch_Text_Editor");
         }
     }
 }
