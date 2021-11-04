@@ -65,18 +65,28 @@ namespace DragonQuestEditor
 
                 Console.WriteLine("DEBUG:");
                 string path = openFileDialog.FileName;
-                var textsArray = new ArrayList();
+               
 
                 byte[] readText = File.ReadAllBytes(path);
                 int i = 2;
 
-
+                textBox1.Clear();
+                textBox2.Clear();
+                treeView1.BeginUpdate();
+                treeView1.Nodes.Clear();
+                treeView1.Nodes.Add(new TreeNode(openFileDialog.SafeFileName));
+                int masterIndex = -1;
                 while (i + 1 < readText.Length)
                 {
+
                     string testing = readText[i + 6].ToString("X");
                     // 2 Arrays
-                    if (testing.Equals("3C")|| testing.Equals("30") || testing.Equals("31"))
+                    
+                    if (testing.Equals("3C") || testing.Equals("30") || testing.Equals("31"))
                     {
+                        var masterArray = new ArrayList();
+                        var subArray = new ArrayList();
+                        var textsArray = new ArrayList();
                         string master1 = readText[i].ToString("X");
                         string master2 = readText[i + 1].ToString("X");
                         if (master1.Equals("0"))
@@ -85,9 +95,10 @@ namespace DragonQuestEditor
                             master2 = "00";
                         string masterArrayLength = master1 + master2;
                         i += 2;
-                        Console.WriteLine("Tamanho do array Mestre: " + Convert.ToInt32(masterArrayLength, 16) + " " + i+ " "+testing);
+                        //Console.WriteLine("Tamanho do array Mestre: " + Convert.ToInt32(masterArrayLength, 16) + " " + i + " " + testing);
                         for (int j = 0; j < Convert.ToInt32(masterArrayLength, 16); j++)
                         {
+                            
                             string sub1 = readText[i].ToString("X");
                             string sub2 = readText[i + 1].ToString("X");
                             if (sub1.Equals("0"))
@@ -96,9 +107,10 @@ namespace DragonQuestEditor
                                 sub2 = "00";
                             string subArrayLength = sub1 + sub2;
                             i += 2;
-                            Console.WriteLine("\tTamanho do sub array: " + Convert.ToInt32(subArrayLength, 16) + " " + i);
+                            //Console.WriteLine("\tTamanho do sub array: " + Convert.ToInt32(subArrayLength, 16) + " " + i);
                             for (int k = 0; k < Convert.ToInt32(subArrayLength, 16); k++)
                             {
+                                
                                 string text1 = readText[i].ToString("X");
                                 string text2 = readText[i + 1].ToString("X");
                                 if (text1.Equals("0"))
@@ -106,7 +118,7 @@ namespace DragonQuestEditor
                                 if (text2.Equals("0"))
                                     text2 = "00";
                                 string textStringLength = text1 + text2;
-                                Console.WriteLine("\t\tTamanho dos textos: " + textStringLength + " " + i + "\n");
+                                //Console.WriteLine("\t\tTamanho dos textos: " + textStringLength + " " + i + "\n");
                                 int cont = i + 2;
                                 var byteText = new ArrayList();
                                 for (int l = 0; l < Convert.ToInt32(textStringLength, 16); l++)
@@ -121,15 +133,41 @@ namespace DragonQuestEditor
                                     cont2++;
                                 }
                                 string currentText = System.Text.Encoding.UTF8.GetString(text);
-                                Console.WriteLine(currentText);
+                                textsArray.Add(currentText);
+                                //Console.WriteLine(currentText);
                                 i += Convert.ToInt32(textStringLength, 16) + 3;
                             }
+                            subArray.Add(textsArray);
                             j += Convert.ToInt32(subArrayLength, 16) - 1;
                         }
+                        masterArray.Add(subArray);
+                        masterIndex++;
+
+                        int subIndex = 0;
+                        int textIndex = 0;
+                        treeView1.Nodes[0].Nodes.Add(new TreeNode("Master Entry" +masterIndex));
+                        foreach (ArrayList sub in masterArray)
+                        {
+                            treeView1.Nodes[0].Nodes[masterIndex].Nodes.Add(new TreeNode("Sub entry "+subIndex));
+                            foreach (ArrayList text in sub)
+                            {
+                                treeView1.Nodes[0].Nodes[masterIndex].Nodes[subIndex].Nodes.Add(new TreeNode("Text Entry "+textIndex));
+                                foreach (String textString in text)
+                                {
+                                    treeView1.Nodes[0].Nodes[masterIndex].Nodes[subIndex].Nodes[textIndex].Nodes.Add(new TreeNode(textString));
+                                    Console.WriteLine(textString + "\n");
+                                }
+                                textIndex++;
+                            }
+                            subIndex++;
+                        }
+
                     }
                     // 1 Array
-                    else 
+                    else
                     {
+                        var masterArray = new ArrayList();
+                        var textsArray = new ArrayList();
                         string master1 = readText[i].ToString("X");
                         string master2 = readText[i + 1].ToString("X");
                         if (master1.Equals("0"))
@@ -138,10 +176,10 @@ namespace DragonQuestEditor
                             master2 = "00";
                         string masterArrayLength = master1 + master2;
                         i += 2;
-                        Console.WriteLine("Tamanho do array Mestre: " + Convert.ToInt32(masterArrayLength, 16) + " " + i + " " + testing);
+                        //Console.WriteLine("Tamanho do array Mestre: " + Convert.ToInt32(masterArrayLength, 16) + " " + i + " " + testing);
                         for (int j = 0; j < Convert.ToInt32(masterArrayLength, 16); j++)
                         {
-
+                            
                             string text1 = readText[i].ToString("X");
                             string text2 = readText[i + 1].ToString("X");
                             if (text1.Equals("0"))
@@ -149,7 +187,7 @@ namespace DragonQuestEditor
                             if (text2.Equals("0"))
                                 text2 = "00";
                             string textStringLength = text1 + text2;
-                            Console.WriteLine("\t\tTamanho dos textos: " + textStringLength + " " + i + "\n");
+                            //Console.WriteLine("\t\tTamanho dos textos: " + textStringLength + " " + i + "\n");
                             int cont = i + 2;
                             var byteText = new ArrayList();
                             for (int l = 0; l < Convert.ToInt32(textStringLength, 16); l++)
@@ -164,14 +202,29 @@ namespace DragonQuestEditor
                                 cont2++;
                             }
                             string currentText = System.Text.Encoding.UTF8.GetString(text);
-                            Console.WriteLine(currentText);
+                            textsArray.Add(currentText);
+                            //Console.WriteLine(currentText);
                             i += Convert.ToInt32(textStringLength, 16) + 3;
                         }
-                        
+                        masterArray.Add(textsArray);
+                        masterIndex++;
+
+                        int textIndex = 0;
+                        treeView1.Nodes[0].Nodes.Add(new TreeNode("Master Entry "+masterIndex));
+                        foreach (ArrayList text in masterArray)
+                        {
+                            treeView1.Nodes[0].Nodes[masterIndex].Nodes.Add(new TreeNode("Text Entry "+textIndex));
+                            foreach (String textString in text)
+                            {
+                                treeView1.Nodes[0].Nodes[masterIndex].Nodes[textIndex].Nodes.Add(new TreeNode(textString));
+                                Console.WriteLine(textString + "\n");
+                            }
+                            textIndex++;
+                        }
                     }
-                    
                 }
-                
+                treeView1.Nodes[0].Expand();
+                treeView1.EndUpdate();
             }
         }
 

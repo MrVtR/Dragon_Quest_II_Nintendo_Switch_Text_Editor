@@ -8,3 +8,13 @@ C:\Users\vitor\source\repos\DragonQuestEditor\obj\Debug\DragonQuestEditor.csproj
 C:\Users\vitor\source\repos\DragonQuestEditor\obj\Debug\DragonQuestEditor.csproj.CoreCompileInputs.cache
 C:\Users\vitor\source\repos\DragonQuestEditor\obj\Debug\DragonQuestEditor.exe
 C:\Users\vitor\source\repos\DragonQuestEditor\obj\Debug\DragonQuestEditor.pdb
+C:\Users\vitor\Desktop\Dragon_Quest_II_Nintendo_Switch_Text_Editor\bin\Debug\DragonQuestEditor.exe.config
+C:\Users\vitor\Desktop\Dragon_Quest_II_Nintendo_Switch_Text_Editor\bin\Debug\DragonQuestEditor.exe
+C:\Users\vitor\Desktop\Dragon_Quest_II_Nintendo_Switch_Text_Editor\bin\Debug\DragonQuestEditor.pdb
+C:\Users\vitor\Desktop\Dragon_Quest_II_Nintendo_Switch_Text_Editor\obj\Debug\DragonQuestEditor.csprojAssemblyReference.cache
+C:\Users\vitor\Desktop\Dragon_Quest_II_Nintendo_Switch_Text_Editor\obj\Debug\DragonQuestEditor.Form1.resources
+C:\Users\vitor\Desktop\Dragon_Quest_II_Nintendo_Switch_Text_Editor\obj\Debug\DragonQuestEditor.Properties.Resources.resources
+C:\Users\vitor\Desktop\Dragon_Quest_II_Nintendo_Switch_Text_Editor\obj\Debug\DragonQuestEditor.csproj.GenerateResource.cache
+C:\Users\vitor\Desktop\Dragon_Quest_II_Nintendo_Switch_Text_Editor\obj\Debug\DragonQuestEditor.csproj.CoreCompileInputs.cache
+C:\Users\vitor\Desktop\Dragon_Quest_II_Nintendo_Switch_Text_Editor\obj\Debug\DragonQuestEditor.exe
+C:\Users\vitor\Desktop\Dragon_Quest_II_Nintendo_Switch_Text_Editor\obj\Debug\DragonQuestEditor.pdb
