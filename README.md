@@ -11,6 +11,7 @@ Repository that contains the code for edit text from stringDataEn.bin and string
 - [ ] Create extraction function for StringMapEn.bin
 - [ ] Include extracted data from StringMapEn.bin to TreeView to support text editions
 - [ ] Create save function to repack StringMapEn.bin
+- [ ] Create Find Text function (This can help to translate the game I guess)
 
 ### To-Do List for Dragon Quest I and III
 - [ ] Create extractor and repacker for the text files from Dragon Quest I and III (Have to map the text files yet)
