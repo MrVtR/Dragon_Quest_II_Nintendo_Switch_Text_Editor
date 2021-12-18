@@ -29,10 +29,9 @@ To test the program, you need to compile the project preferably with Visual Stud
 * Vítor Ribeiro ([MrVtR](https://github.com/MrVtR))
 
 ## Images/screenshots
-É necessário colocar pelo menos 3 imagens/screenshots do projeto, porém fiquem a vontade para colocar mais, a medida do que vocês acharem legal para ilustrar o projeto.
 
-Para colocar imagens no Readme do Github, vocês podem usar o seguinte comando (abrir este Readme no modo raw ou como txt):
+![Imagem](https://github.com/MrVtR/Dragon_Quest_II_Nintendo_Switch_Text_Editor/blob/main/images/img.png)
+---
 
-![Imagem](https://github.com/Infinitemarcus/Hackerspace-template/blob/master/exemplo.png)
+![Imagem](https://github.com/MrVtR/Dragon_Quest_II_Nintendo_Switch_Text_Editor/blob/main/images/img2.png)
 
-É preferível que vocês usem imagens hospedadas no próprio GitHub do projeto. É só referenciar o link delas no comando acima.
